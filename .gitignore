@@ -1,0 +1,68 @@
+# --- OS & System Files ---
+.DS_Store
+Thumbs.db
+*.local
+
+# --- IDEs & Editors ---
+.idea/
+*.iml
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# --- Backend (Maven / Java / Spring Boot) ---
+backend/target/
+backend/*.jar
+backend/*.war
+backend/*.zip
+backend/*.tar.gz
+backend/*.rar
+backend/pom.xml.tag
+backend/pom.xml.releaseBackup
+backend/pom.xml.next
+backend/release.properties
+backend/dependency-reduced-pom.xml
+backend/buildNumber.properties
+backend/.mvn/timing.properties
+backend/.settings/
+backend/.project
+backend/.classpath
+backend/.factorypath
+
+# Log files
+backend/*.log
+*.log
+
+# Database files
+*.db
+backend/*.db
+cardb.mv.db
+cardb.trace.db
+
+# --- Frontend (Node / React / Vite) ---
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/coverage/
+frontend/*.lcov
+frontend/.nyc_output
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# Local env files
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+.env
+.env*.local
+
+# --- Docker ---
+.docker/
+docker-compose.override.yml
