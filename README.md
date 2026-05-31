@@ -15,13 +15,18 @@ Instead of a generic car listing catalog, the app acts as a structured decision 
 
 ### Method A: Docker Compose (Easiest - Zero Installation)
 If you have Docker and Docker Compose installed:
-1. Open terminal in the project root directory.
-2. Run:
+1. Open your terminal in the project root directory.
+2. Build and launch the containers:
    ```bash
    docker compose up --build
    ```
-3. The backend container compiles the Spring Boot code, and the frontend container compiles the Vite static files and serves them via Nginx.
+   *Note: The `--build` flag compiles the custom backend JRE and frontend Nginx containers with the latest source code.*
+3. The backend container compiles the Spring Boot code, and the frontend container compiles the Vite static files and serves them via Nginx on port `5173`.
 4. Open the application at [http://localhost:5173](http://localhost:5173).
+5. **Stopping the App**: To stop and clean up containers, run:
+   ```bash
+   docker compose down
+   ```
 
 ---
 
@@ -53,7 +58,7 @@ The project comes with automated startup scripts in the root directory:
    ```
 
 ### Access URLs
-- **Frontend App**: [http://localhost:5173](http://localhost:5173)
+- **Frontend Web App**: [http://localhost:5173](http://localhost:5173)
 - **Backend API**: [http://localhost:8080/api/cars](http://localhost:8080/api/cars)
 - **H2 In-Memory Console**: [http://localhost:8080/h2-console](http://localhost:8080/h2-console)  
   *Connection details:* JDBC URL: `jdbc:h2:mem:cardb` | Username: `sa` | Password: (empty)
